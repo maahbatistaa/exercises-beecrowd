@@ -2,24 +2,21 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class b1010 {
-    public static void main(String[] args) throws Exception {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws Exception {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
 
-        int cod1, qtd1, cod2, qtd2;
-        double preco1, preco2, pagar;
+		int cod1 = sc.nextInt();
+		int qtd1 = sc.nextInt();
+		double preco1 = sc.nextDouble();
+		int cod2 = sc.nextInt();
+		int qtd2 = sc.nextInt();
+		double preco2 = sc.nextDouble();
 
-        cod1 = sc.nextInt();
-        qtd1 = sc.nextInt();
-        preco1 = sc.nextDouble();
-        cod2 = sc.nextInt();
-        qtd2 = sc.nextInt();
-        preco2 = sc.nextDouble();
+		double pagar = (qtd1 * preco1) + (qtd2 * preco2);
 
-        pagar = (qtd1 * preco1) + (qtd2 * preco2);
+		System.out.println("VALOR A PAGAR: R$ " + String.format("%.2f", pagar));
 
-        System.out.println("VALOR A PAGAR = R$ " + String.format("%.2f", pagar));
-
-        sc.close();
-    }
+		sc.close();
+	}
 }

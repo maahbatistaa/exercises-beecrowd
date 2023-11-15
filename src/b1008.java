@@ -2,25 +2,19 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class b1008 {
-    public static void main(String[] args) throws Exception {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws Exception {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
 
-        int numero, horas;
-        double valorHora, salario;
+		int numero = sc.nextInt();
+		int horas = sc.nextInt();
 
-        System.out.print("Informar seu numero: ");
-        numero = sc.nextInt();
-        System.out.print("Informar horas trabalhadas: ");
-        horas = sc.nextInt();
-        System.out.print("Informar valor por hora: ");
-        valorHora = sc.nextDouble();
+		double valorHora = sc.nextDouble();
+		double salario = valorHora * horas;
 
-        salario = valorHora * horas;
+		System.out.println("NUMBER = " + numero);
+		System.out.println("SALARY = U$ " + String.format("%.2f", salario));
 
-        System.out.println("NUMBER = " + numero);
-        System.out.println("SALARY = U$ " + String.format("%.2f", salario));
-
-        sc.close();
-    }
+		sc.close();
+	}
 }
