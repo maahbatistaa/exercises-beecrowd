@@ -2,28 +2,25 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class b1012 {
-    public static void main(String[] args) throws Exception {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws Exception {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
 
-        double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
+		double A = sc.nextDouble();
+		double B = sc.nextDouble();
+		double C = sc.nextDouble();
+		double triangulo = (A * C) / 2;
+		double circulo = 3.14159 * (Math.pow(C, 2));
+		double trapezio = ((A + B) * C) / 2;
+		double quadrado = Math.pow(B, 2);
+		double retangulo = A * B;
 
-        A = sc.nextDouble();
-        B = sc.nextDouble();
-        C = sc.nextDouble();
+		System.out.println("TRIANGULO: " + String.format("%.3f", triangulo));
+		System.out.println("CIRCULO: " + String.format("%.3f", circulo));
+		System.out.println("TRAPEZIO: " + String.format("%.3f", trapezio));
+		System.out.println("QUADRADO: " + String.format("%.3f", quadrado));
+		System.out.println("RETANGULO: " + String.format("%.3f", retangulo));
 
-        triangulo = (A * C) / 2;
-        circulo = 3.14159 * (Math.pow(C, 2));
-        trapezio = ((A + B) * C) / 2;
-        quadrado = Math.pow(B, 2);
-        retangulo = A * B;
-
-        System.out.println("TRIANGULO: " + String.format("%.3f", triangulo));
-        System.out.println("CIRCULO: " + String.format("%.3f", circulo));
-        System.out.println("TRAPEZIO: " + String.format("%.3f", trapezio));
-        System.out.println("QUADRADO: " + String.format("%.3f", quadrado));
-        System.out.println("RETANGULO: " + String.format("%.3f", retangulo));
-
-        sc.close();
-    }
+		sc.close();
+	}
 }

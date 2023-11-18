@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class b1013 {
 	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
 
-		Scanner leitor = new Scanner(System.in);
-		int valor1 = leitor.nextInt();
-		int valor2 = leitor.nextInt();
-		int valor3 = leitor.nextInt();
+		int valor1 = sc.nextInt();
+		int valor2 = sc.nextInt();
+		int valor3 = sc.nextInt();
+		
 		if (valor1 > valor2 && valor1 > valor3) {
 			System.out.println(valor1 + " eh o maior");
 		} else if (valor2 > valor3) {

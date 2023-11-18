@@ -1,18 +1,17 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class b1014 {
+public class b1011 {
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int x = sc.nextInt();
-		double y = sc.nextDouble();
-		double consumo = x / y;
+		double pi = 3.14159;
+		double raio = sc.nextDouble();
+		double volume = (4/3.0) * pi * Math.pow(raio, 3);
 
-		System.out.print(String.format("%.3f", consumo));
-		System.out.println(" km/l");
-		
+		System.out.println("VOLUME = " + String.format("%.3f", volume));
+
 		sc.close();
 	}
 }
