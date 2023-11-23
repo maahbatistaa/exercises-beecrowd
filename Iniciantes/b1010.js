@@ -1,14 +1,16 @@
 var input = require('fs').readFileSync('./stdin', 'utf8');
 var lines = input.split('\n');
 
-var peca1 = parseInt(lines.shift())
-var qtd1 = parseInt(lines.shift())
-var preco1 = parseFloat(lines.shift())
+var line1 = lines.shift().split(' ');
+var cod1 = parseInt(line1[0]);
+var qtd1 = parseInt(line1[1]);
+var preco1 = parseFloat(line1[2]);
 
-var peca2 = parseInt(lines.shift())
-var qtd2 =  parseInt(lines.shift())
-var preco2 = parseFloat(lines.shift())
+var line2 = lines.shift().split(' ')
+var cod2 = parseInt(line2[0]);
+var qtd2 = parseInt(line2[1]);
+var preco2 = parseFloat(line2[2]);
 
-var pagar = (qtd1 * preco1) + (qtd2 * preco2)
+var total = (qtd1 * preco1) + (qtd2 * preco2)
 
-console.log("VALOR A PAGAR: R$ " + pagar.toFixed(2))
+console.log('VALOR A PAGAR: R$ ' + total.toFixed(2));
